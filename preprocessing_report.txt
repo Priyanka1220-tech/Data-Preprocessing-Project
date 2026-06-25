@@ -1,0 +1,51 @@
+　　　　　　　　　　　　　　　　　Data Preprocessing Report
+
+　　　　　　　Title:   Data Preprocessing for Machine Learning
+
+Objective
+
+The objective of this project is to prepare raw data for machine learning by performing data cleaning, handling missing values, encoding categorical variables, scaling numerical features, and creating new features.
+
+Steps Performed
+
+ 1. Exploratory Data Analysis (EDA)
+
+* Loaded the dataset using Pandas.
+* Checked data types, missing values, and statistical summaries.
+
+ 2. Handling Missing Values
+
+* Filled missing numerical values using mean imputation.
+* Filled missing categorical values using mode imputation.
+
+ 3. Encoding Categorical Variables
+
+* Applied One-Hot Encoding to categorical columns such as Gender and Department.
+
+　4. Feature Scaling
+
+* Used StandardScaler to normalize numerical features including Age, Salary, and Experience.
+
+ 5. Feature Engineering
+
+* Created a new feature called `Experience_Age_Ratio`.
+
+ 6. Train-Test Split
+
+* Split the dataset into 80% training data and 20% testing data.
+* Applied scaling only on the training data to avoid data leakage.
+
+ 7. Exporting the Cleaned Dataset
+
+* Saved the final preprocessed dataset as `cleaned_dataset.csv`.
+
+ Tools and Libraries Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+
+ Conclusion
+
+The dataset was successfully cleaned and preprocessed. The final dataset is ready for building and training machine learning models.

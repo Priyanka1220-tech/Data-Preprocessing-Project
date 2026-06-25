@@ -1,0 +1,16 @@
+Age,Gender,Salary,Department,Experience,Purchased
+25,Male,35000,IT,2,0
+30,Female,45000,HR,5,1
+35,Male,55000,Finance,8,1
+28,Female,,IT,3,0
+40,Male,65000,Finance,10,1
+32,Female,48000,HR,6,1
+29,Male,42000,IT,4,0
+45,Female,70000,Management,15,1
+38,Male,,Finance,9,1
+26,Female,38000,HR,2,0
+33,Male,52000,IT,7,1
+31,Female,47000,Finance,5,1
+27,Male,40000,HR,3,0
+50,Female,80000,Management,20,1
+36,Male,60000,IT,10,1

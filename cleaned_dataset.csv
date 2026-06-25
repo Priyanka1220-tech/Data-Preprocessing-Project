@@ -1,0 +1,128 @@
+Python 3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+>>> 
+======================================================= RESTART: C:\Users\Dell\AppData\Local\Programs\Python\Python314\step 3.py =======================================================
+First 5 Rows:
+   Age  Gender   Salary Department  Experience  Purchased
+0   25    Male  35000.0         IT           2          0
+1   30  Female  45000.0         HR           5          1
+2   35    Male  55000.0    Finance           8          1
+3   28  Female      NaN         IT           3          0
+4   40    Male  65000.0    Finance          10          1
+
+Dataset Information:
+<class 'pandas.DataFrame'>
+RangeIndex: 15 entries, 0 to 14
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   Age         15 non-null     int64  
+ 1   Gender      15 non-null     str    
+ 2   Salary      13 non-null     float64
+ 3   Department  15 non-null     str    
+ 4   Experience  15 non-null     int64  
+ 5   Purchased   15 non-null     int64  
+dtypes: float64(1), int64(3), str(2)
+memory usage: 852.0 bytes
+None
+
+Missing Values:
+Age           0
+Gender        0
+Salary        2
+Department    0
+Experience    0
+Purchased     0
+dtype: int64
+
+Statistical Summary:
+             Age        Salary  Experience  Purchased
+count  15.000000     13.000000   15.000000  15.000000
+mean   33.666667  52076.923077    7.266667   0.666667
+std     7.158079  13444.091258    5.035115   0.487950
+min    25.000000  35000.000000    2.000000   0.000000
+25%    28.500000  42000.000000    3.500000   0.000000
+50%    32.000000  48000.000000    6.000000   1.000000
+75%    37.000000  60000.000000    9.500000   1.000000
+max    50.000000  80000.000000   20.000000   1.000000
+
+Data Types:
+Age             int64
+Gender            str
+Salary        float64
+Department        str
+Experience      int64
+Purchased       int64
+dtype: object
+Missing values before:
+Age           0
+Gender        0
+Salary        2
+Department    0
+Experience    0
+Purchased     0
+dtype: int64
+
+Missing values after:
+Age           0
+Gender        0
+Salary        0
+Department    0
+Experience    0
+Purchased     0
+dtype: int64
+
+Updated Dataset:
+     Age  Gender        Salary  Department  Experience  Purchased
+0   25.0    Male  35000.000000          IT         2.0        0.0
+1   30.0  Female  45000.000000          HR         5.0        1.0
+2   35.0    Male  55000.000000     Finance         8.0        1.0
+3   28.0  Female  52076.923077          IT         3.0        0.0
+4   40.0    Male  65000.000000     Finance        10.0        1.0
+5   32.0  Female  48000.000000          HR         6.0        1.0
+6   29.0    Male  42000.000000          IT         4.0        0.0
+7   45.0  Female  70000.000000  Management        15.0        1.0
+8   38.0    Male  52076.923077     Finance         9.0        1.0
+9   26.0  Female  38000.000000          HR         2.0        0.0
+10  33.0    Male  52000.000000          IT         7.0        1.0
+11  31.0  Female  47000.000000     Finance         5.0        1.0
+12  27.0    Male  40000.000000          HR         3.0        0.0
+13  50.0  Female  80000.000000  Management        20.0        1.0
+14  36.0    Male  60000.000000          IT        10.0        1.0
+Dataset after encoding:
+    Age        Salary  ...  Department_IT  Department_Management
+0  25.0  35000.000000  ...           True                  False
+1  30.0  45000.000000  ...          False                  False
+2  35.0  55000.000000  ...          False                  False
+3  28.0  52076.923077  ...           True                  False
+4  40.0  65000.000000  ...          False                  False
+
+[5 rows x 8 columns]
+
+Columns:
+Index(['Age', 'Salary', 'Experience', 'Purchased', 'Gender_Male',
+       'Department_HR', 'Department_IT', 'Department_Management'],
+      dtype='str')
+Dataset after scaling:
+        Age    Salary  ...  Department_IT  Department_Management
+0 -1.253249 -1.420147  ...           True                  False
+1 -0.530221 -0.588529  ...          False                  False
+2  0.192807  0.243088  ...          False                  False
+3 -0.819432  0.000000  ...           True                  False
+4  0.915835  1.074706  ...          False                  False
+
+[5 rows x 8 columns]
+Dataset after Feature Engineering:
+        Age    Salary  ...  Department_Management  Experience_Age_Ratio
+0 -1.253249 -1.420147  ...                  False              0.863915
+1 -0.530221 -0.588529  ...                  False              0.878827
+2  0.192807  0.243088  ...                  False              0.781897
+3 -0.819432  0.000000  ...                  False              1.070405
+4  0.915835  1.074706  ...                  False              0.613546
+
+[5 rows x 9 columns]
+Training set shape: (12, 8)
+Testing set shape: (3, 8)
+Training labels shape: (12,)
+Testing labels shape: (3,)
+Cleaned dataset saved successfully as 'cleaned_dataset.csv'
